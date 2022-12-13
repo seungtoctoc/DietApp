@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView myRecyclerView;
     LinearLayoutManager myLayoutManager;
     FloatingActionButton fab;
+    TextView textView_sum;
+
 
     static ArrayList<Meal> mealList = new ArrayList<Meal>();
     static ArrayList<String> foodList = new ArrayList<>();
@@ -42,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         if(mealList.size()==0){
             dataSampleSet();
         }
@@ -53,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
         MyAdapter myAdapter = new MyAdapter();
         myRecyclerView.setAdapter(myAdapter);
 
+
+
+
+        textView_sum = (TextView) findViewById(R.id.textView_sum);
+        int sum=0;
+        for(int i = 0 ; i < mealList.size() ; i++){
+            sum+=mealList.get(i).kcal;
+        }
+        textView_sum.setText("최근 " + Integer.toString(mealList.size()) + "식사 칼로리 합 : " + Integer.toString(sum) + "kcal, 식사 당 평균 : " +  Double.toString((double)sum/mealList.size()) + "kcal");
 
 
 
