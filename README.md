@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/seungtoctoc/DietApp/assets/102455571/fc253a86-0b0b-4ad7-aa52-d90bb2cf9ef5">
+  <img src="https://github.com/seungtoctoc/DietApp/assets/102455571/0736929e-3d66-4fae-9aa7-c544123c606a">
 </p>
 
 - 최근 식사에 대한 칼로리 합, 식사 당 평균 칼로리 출력
